@@ -53,5 +53,30 @@ public class DuplicatesCountInAnArray {
         }
         System.out.println();
     }
+
+    static void way2() {
+        int actualArray[] = {1, 3, 3, 1, 5, 2, 6, 8, 4, 9};
+                       //    0  1  2  3  4  5  6  7  8
+
+        for(int i = 0; i < actualArray.length; i++) {          // 0<9     2<9
+            boolean isUnique = true;                           // true    true
+            for(int j = 0; j < i; j++) {                       // 0<0     0<2
+                if(actualArray[j] == actualArray[i]) {         // 1=3 3==3
+                    isUnique = false;                          // false
+                    break;
+                }
+            }
+
+            if(isUnique) {                                     //    false
+                int count = 0;                                 // 0
+                for(int j = 0; j < actualArray.length; j++) {  // 0<9    1<9
+                    if (actualArray[i] == actualArray[j]) {    // 1 == 1 1==3
+                        count++;                               // 1
+                    }
+                }
+                System.out.println(actualArray[i] + " exists " + count + " times in array");
+            }
+        }
+    }
 }
 
