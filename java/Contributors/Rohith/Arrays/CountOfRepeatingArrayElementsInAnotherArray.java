@@ -5,9 +5,7 @@
 // 3 exists 2 times
 // 6 exists 3 times
 // 8 exists 1 times
-
-package Arrays;
-
+package Contributors.Rohith.Arrays;
 import java.util.*;
 
 public class CountOfRepeatingArrayElementsInAnotherArray {
